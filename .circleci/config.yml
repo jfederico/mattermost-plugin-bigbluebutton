@@ -18,7 +18,7 @@ jobs:
     ####   /go/src/github.com/circleci/go-tool
     ####   /go/src/bitbucket.org/circleci/go-tool
     #working_directory: /go/src/github.com/{{ .Environment.CIRCLE_USERNAME  }}/mattermost-plugin-bigbluebutton
-    working_directory: /go/src/github.com/$CIRCLE_USERNAME/mattermost-plugin-bigbluebutton
+    working_directory: "/go/src/github.com/$CIRCLE_USERNAME/mattermost-plugin-bigbluebutton"
     #working_directory: /go/src/github.com/blindsidenetworks/mattermost-plugin-bigbluebutton
     steps:
       - checkout

@@ -6,7 +6,7 @@ jobs:
   build:
     docker:
       - image: circleci/golang:1.9
-    working_directory: ~/
+    working_directory: ~/repo
     steps:
       - checkout
       - run: go get -v -t -d ./...

@@ -20,11 +20,11 @@ jobs:
     #working_directory: /go/src/github.com/{{ .Environment.CIRCLE_USERNAME  }}/mattermost-plugin-bigbluebutton
     #working_directory: "/go/src/github.com/$CIRCLE_USERNAME/mattermost-plugin-bigbluebutton"
     #working_directory: /go/src/github.com/blindsidenetworks/mattermost-plugin-bigbluebutton
-    working_directory: /app
+    working_directory: /go/src/github.com/circleci/mattermost-plugin-bigbluebutton
     steps:
       - checkout
 
       # specify any bash command here prefixed with `run: `
-      - run: ln -s /go/src/github.com/$CIRCLE_USERNAME/mattermost-plugin-bigbluebutton /app
+      - run: ln -s /go/src/github.com/$CIRCLE_USERNAME/mattermost-plugin-bigbluebutton /go/src/github.com/circleci/mattermost-plugin-bigbluebutton
       - run: go get -v -t -d ./...
       - run: go test -v ./...
